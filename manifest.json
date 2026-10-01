@@ -1,0 +1,10 @@
+{
+  "name": "作業記録",
+  "short_name": "作業記録",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#202124",
+  "lang": "ja",
+  "icons": []
+}
