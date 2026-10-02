@@ -20,7 +20,8 @@ main{padding:14px 16px 24px}
 .day-number{font-size:13px;color:#dfe3e9}
 .day-amount{font-size:11px;font-weight:700;margin-top:18px;color:#f0f2f5;line-height:1.2}
 .day-amount small{display:block;font-size:9px;color:#9ba2ae;font-weight:500;margin-top:2px}
-.monthly-total{display:flex;justify-content:flex-end;align-items:center;gap:18px;padding:15px 4px;font-size:16px;text-align:right}.daily-total{display:flex;justify-content:space-between;align-items:center;padding:15px 4px;font-size:16px}
+.monthly-total{display:flex;justify-content:flex-end;align-items:center;gap:18px;padding:15px 4px;font-size:16px;text-align:right}
+.daily-total{display:flex;justify-content:space-between;align-items:center;padding:15px 4px;font-size:16px}
 .monthly-total strong,.daily-total strong{font-size:22px}
 .monthly-total small,.daily-total small{display:block;color:#9da4b0;font-size:12px;margin-top:3px}
 .secondary,.primary{width:100%;margin-top:10px}
