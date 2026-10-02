@@ -1,46 +1,64 @@
 *{box-sizing:border-box}
-:root{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#202124;background:#f6f6f6}
-body{margin:0;max-width:760px;margin:auto;background:#fff;min-height:100vh}
-header{position:sticky;top:0;background:#fff;border-bottom:1px solid #ddd;padding:12px 16px;z-index:5}
-h1{font-size:20px;margin:0 0 8px}
-nav{display:flex;align-items:center;justify-content:space-between}
-nav strong{font-size:18px}
-button{border:0;border-radius:9px;padding:10px 14px;font-size:15px;background:#e9eaec}
+:root{color-scheme:dark;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#eef0f4;background:#0b0d11}
+html,body{margin:0;min-height:100%;background:#0b0d11}
+body{max-width:760px;margin:auto;background:#111318;min-height:100vh}
+button,input{font:inherit}
+button{border:1px solid #2c3039;border-radius:10px;padding:10px 14px;font-size:15px;background:#20242c;color:#eef0f4;cursor:pointer}
 button:active{transform:scale(.98)}
-main{padding:14px 16px 40px}
+header{background:#111318;border-bottom:1px solid #292d35;padding:12px 16px;z-index:5}
+h1{font-size:20px;margin:0 0 8px}
+.month-nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.month-nav button{width:44px;height:40px;padding:0;font-size:27px;line-height:1}
+.month-nav strong{font-size:18px}
+main{padding:14px 16px 24px}
 .hidden{display:none!important}
-.calendar{display:grid;grid-template-columns:repeat(7,1fr);border-top:1px solid #ddd;border-left:1px solid #ddd}
-.weekday,.day{border-right:1px solid #ddd;border-bottom:1px solid #ddd}
-.weekday{text-align:center;font-size:12px;padding:7px 0;background:#f1f1f1}
-.day{min-height:72px;padding:6px;cursor:pointer}
-.day.empty{background:#fafafa;cursor:default}
-.day-number{font-size:13px}
-.day-amount{font-size:12px;font-weight:700;margin-top:22px}
-.monthly-total,.daily-total{display:flex;justify-content:space-between;align-items:center;padding:16px 4px;font-size:16px}
+.calendar{display:grid;grid-template-columns:repeat(7,1fr);border-top:1px solid #2b3038;border-left:1px solid #2b3038;overflow:hidden;border-radius:10px 10px 0 0}
+.weekday,.day{border-right:1px solid #2b3038;border-bottom:1px solid #2b3038}
+.weekday{text-align:center;font-size:12px;padding:7px 0;background:#1a1e25;color:#9ea5b1}
+.day{min-height:68px;padding:6px;cursor:pointer;background:#15181e}
+.day.empty{background:#101218;cursor:default}
+.day-number{font-size:13px;color:#dfe3e9}
+.day-amount{font-size:11px;font-weight:700;margin-top:18px;color:#f0f2f5;line-height:1.2}
+.day-amount small{display:block;font-size:9px;color:#9ba2ae;font-weight:500;margin-top:2px}
+.monthly-total,.daily-total{display:flex;justify-content:space-between;align-items:center;padding:15px 4px;font-size:16px}
 .monthly-total strong,.daily-total strong{font-size:22px}
+.monthly-total small,.daily-total small{display:block;color:#9da4b0;font-size:12px;margin-top:3px}
 .secondary,.primary{width:100%;margin-top:10px}
-.primary{background:#202124;color:#fff}
-.back{margin-bottom:8px}
+.primary{background:#e8ebf0;color:#101217;border-color:#e8ebf0}
+.back{margin-bottom:8px;background:transparent;border-color:transparent;padding-left:0;color:#b9c0cb}
 h2{margin:8px 0 14px}
-h3{margin-top:24px}
+h3{margin:24px 0 10px}
 .attendance{display:flex;gap:10px;margin-bottom:18px}
-.attendance label{flex:1;font-size:13px}
-input{width:100%;margin-top:5px;padding:9px;border:1px solid #ccc;border-radius:7px;font-size:16px;background:#fff}
-.day-grid{display:grid;grid-template-columns:58px repeat(4,1fr);border-top:1px solid #ccc;border-left:1px solid #ccc}
-.time-label,.slot{min-height:52px;border-right:1px solid #ccc;border-bottom:1px solid #ccc}
-.time-label{display:flex;align-items:center;justify-content:center;font-size:12px;background:#f5f5f5}
-.slot{padding:4px;cursor:pointer;font-size:11px;display:flex;align-items:center;justify-content:center;text-align:center}
-.slot.empty{background:#fff}
-.slot.rate0{background:#e8e8e8}
-.slot.rate300{background:#e9f1ff}
-.slot.rate600{background:#fff0d9}
-.break{grid-column:1/-1;text-align:center;padding:8px;background:#f5f5f5;font-size:12px;border-right:1px solid #ccc;border-bottom:1px solid #ccc}
-.log{border:1px solid #ddd;border-radius:8px;padding:10px;margin:7px 0}
-.log .meta{font-size:12px;color:#666}
-.modal{position:fixed;inset:0;background:#0006;display:flex;align-items:flex-end;justify-content:center;z-index:20}
-.modal-card{background:#fff;width:100%;max-width:760px;border-radius:18px 18px 0 0;padding:18px}
+.attendance label{flex:0 1 145px;font-size:13px;color:#aeb5c0}
+input{width:100%;margin-top:5px;padding:9px;border:1px solid #343944;border-radius:8px;font-size:16px;background:#191c23;color:#eef0f4;min-width:0}
+input:focus{outline:2px solid #555d6c;outline-offset:1px}
+.day-grid{display:grid;grid-template-columns:58px repeat(4,1fr);border-top:1px solid #353a44;border-left:1px solid #353a44;border-radius:9px;overflow:hidden}
+.time-label,.slot{min-height:52px;border-right:1px solid #353a44;border-bottom:1px solid #353a44}
+.time-label{display:flex;align-items:center;justify-content:center;font-size:12px;background:#1a1e25;color:#c2c8d1;cursor:pointer}
+.slot{padding:4px;cursor:pointer;font-size:10px;display:flex;align-items:center;justify-content:center;text-align:center;line-height:1.2}
+.slot.empty{background:#12151b;color:#555d69}
+.slot.rate0{background:#252a32;color:#c1c7d0}
+.slot.rate300{background:#24364c;color:#e5f0ff}
+.slot.rate300-uncertain{background:#453a24;color:#fff0c7}
+.slot.rate600{background:#493525;color:#ffe9d1}
+.break{grid-column:1/-1;text-align:center;padding:8px;background:#171a20;color:#777f8c;font-size:12px;border-right:1px solid #353a44;border-bottom:1px solid #353a44}
+.section-heading{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.section-heading h3{margin-bottom:0}
+.small-button{padding:7px 11px;font-size:13px}
+.special-pay-section{margin-top:4px}
+.special-pay{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid #30353e;border-radius:9px;padding:10px 12px;margin:7px 0;background:#171a20}
+.special-pay .memo{color:#d6dae1;font-size:13px}
+.special-pay .amount{font-weight:700;white-space:nowrap}
+.special-pay-delete{padding:5px 8px;font-size:12px;background:#20242c}
+.log{border:1px solid #30353e;border-radius:9px;padding:10px;margin:7px 0;background:#171a20;cursor:pointer}
+.log .meta{font-size:12px;color:#8f97a4;margin-top:3px}
+.note{font-size:13px;color:#8f97a4;line-height:1.5}
+.modal{position:fixed;inset:0;background:#0009;display:flex;align-items:flex-end;justify-content:center;z-index:20;padding-bottom:env(safe-area-inset-bottom)}
+.modal-card{background:#171a20;border:1px solid #30353e;width:100%;max-width:760px;border-radius:18px 18px 0 0;padding:18px;box-shadow:0 -10px 35px #0008}
+.modal-card h3{margin-top:0}
 .modal-card button{width:100%;margin-top:8px}
+.modal-field{display:block;font-size:13px;color:#aeb5c0;margin:10px 0}
 .rate-row{display:grid;grid-template-columns:1fr 110px;gap:10px;align-items:center;margin:10px 0}
-.note{font-size:13px;color:#666}
-hr{border:0;border-top:1px solid #ddd;margin:24px 0}
-@media(min-width:600px){.modal{align-items:center}.modal-card{border-radius:14px;width:420px}}
+hr{border:0;border-top:1px solid #2c3039;margin:24px 0}
+@media(max-width:430px){.attendance{gap:8px}.attendance label{flex-basis:128px}.time-label{font-size:11px}.slot{font-size:9px;padding:2px}}
+@media(min-width:600px){.modal{align-items:center;padding:16px}.modal-card{border-radius:14px;width:420px}}
